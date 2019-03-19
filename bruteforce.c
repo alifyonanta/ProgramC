@@ -16,5 +16,8 @@ if (y % 3 == 2) printf(“| “);
 }
 printf(“\n”);
 if (x % 3 == 2) printf(“———————–\n”);
+  }
 }
-}
+int number_validation(int row, int col, int n) {
+//kamus
+int x,y;
