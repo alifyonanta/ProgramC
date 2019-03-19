@@ -14,6 +14,7 @@ for (x = 0; x < 9; x++) {
     printf(“%d “, msudoku[x][y]);
 if (y % 3 == 2) printf(“| “);
 }
+  
 printf(“\n”);
 if (x % 3 == 2) printf(“———————–\n”);
   }
