@@ -36,6 +36,10 @@ for (y = 0; y < 9; y++) {
   if (check_minisquare(row,col,n)) return 0; //periksa pada  kotak kecil dari sudoku
   return 1;        //kasus selain diatas, tidak ada angka yang sama, maka mengembalikan 1 (penempatan angka bisa dilakukan)
 }
+  
+int check_minisquare(int row, int col, int n) {
+//kamus
+int i, j, firstx, firsty;
  
 int check_minisquare(int row, int col, int n) {
 //kamus
