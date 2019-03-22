@@ -45,3 +45,14 @@ int check_minisquare(int row, int col, int n) {
 //kamus
 int i, j, firstx, firsty;
   
+//algoritma
+if (row < 3) {
+  firstx = 0;
+if (col < 3) {
+  firsty = 0;        //bagian kotak kecil kiri atas
+} else if (col > 5) {
+  firsty = 6;        //bagian kotak kecil kanan atas
+} else {
+  firsty = 3;        //bagian kotak kecil atas
+  }
+}
