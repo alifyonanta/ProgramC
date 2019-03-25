@@ -62,16 +62,16 @@ if (col < 3) {
     firsty = 0;        //bagian kotak kecil kiri bawah
   } else if (col > 5) {
     firsty = 6;        //bagian kotak kecil kanan bawah
-  } else {
-  firsty = 3;        //bagian kotak kecil bawah
- }
-} else {
-  firstx = 3;
-if (col < 3) {
+  }else{
+    firsty = 3;        //bagian kotak kecil bawah
+  }
+  }else{
+    firstx = 3;
+  if (col < 3) {
   firsty = 0;        //bagian kotak kecil kiri
-} else if (col > 5) {
-  firsty = 6;        //bagian kotak kecil kanan
-} else {
-  firsty = 3;        //bagian kotak kecil tengah
-}
+  } else if (col > 5) {
+    firsty = 6;        //bagian kotak kecil kanan
+  } else {
+    firsty = 3;        //bagian kotak kecil tengah
+  }
 }
