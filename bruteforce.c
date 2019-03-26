@@ -75,3 +75,10 @@ if (col < 3) {
     firsty = 3;        //bagian kotak kecil tengah
   }
 }
+
+//periksa kotak kecil, apakah terdapat angka yang sama
+for (i = firstx; i < (firstx + 3); i++)
+for (j = firsty; j < (firsty + 3); j++)
+if (msudoku[i][j] == n) return 1;
+return 0;    //tidak terdapat angka yang sama pada kotak kecil
+}
