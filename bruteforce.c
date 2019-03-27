@@ -82,3 +82,7 @@ for (j = firsty; j < (firsty + 3); j++)
 if (msudoku[i][j] == n) return 1;
 return 0;    //tidak terdapat angka yang sama pada kotak kecil
 }
+  
+void solve(int row, int col) {
+//kamus
+int n,temp;
