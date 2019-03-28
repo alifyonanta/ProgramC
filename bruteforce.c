@@ -86,3 +86,23 @@ return 0;    //tidak terdapat angka yang sama pada kotak kecil
 void solve(int row, int col) {
 //kamus
 int n,temp;
+  
+  //algoritma
+if (row == 9) {    //basis
+  print();
+  done = 1;
+} else {    //rekursif
+  for (n = 1; n <= 9; n++) {
+    iter++;
+    if (number_validation(row,col,n) && !done) {
+      temp = msudoku[row][col];
+      msudoku[row][col] = n;
+      if (col == 8) solve(row + 1, 0);    //rekursif
+      else solve(row, col + 1);        //rekursif
+      msudoku[row][col] = temp;
+     }
+   }
+  }
+}
+  
+  
