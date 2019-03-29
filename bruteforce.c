@@ -104,5 +104,26 @@ if (row == 9) {    //basis
    }
   }
 }
-  
+
+int main(){
+int i, j;
+FILE *fsoal;
+char nfile[20];
+char sp;
+int retval;
+
+printf(“Masukkan nama file soal : “);
+scanf(“%s”,nfile);
+printf(“\n”);
+
+fsoal = fopen(nfile,”r”);
+if (fsoal == NULL) {
+  printf(“file soal tidak ditemukan\n”);
+} else if (retval != EOF) {
+  for(i=0;i<9;i++)
+  for(j=0;j<9;j++){
+    retval = fscanf(fsoal, “%d”, &msudoku[i][j]);
+    retval = fscanf(fsoal, “%c”, &sp);
+  }
+}
   
