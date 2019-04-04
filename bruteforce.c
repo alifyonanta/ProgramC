@@ -126,4 +126,24 @@ if (fsoal == NULL) {
     retval = fscanf(fsoal, “%c”, &sp);
   }
 }
+  fclose(fsoal);
+
+  print();
+
+  system(“pause”);
+
+  clock_t start=clock();
+
+  solve(0,0);
+
+  clock_t end=clock();
+
+  double solvingtime=(double)(end-start)/CLOCKS_PER_SEC;
+
+  printf(“\n”);
+  printf(“Jumlah iterasi : %d\n”,iter);
+  printf (“It took you %.2lf seconds to get the solution.\n”, solvingtime );
+  system(“pause”);
+  return 0;
+}
   
