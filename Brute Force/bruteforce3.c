@@ -50,3 +50,40 @@ int solveSudoku(uint8_t puzzle[][9], uint8_t row, uint8_t col)
     }
     else return 1;
 }
+
+int main(){
+    //  Start timers
+    struct timeval start, end;
+    gettimeofday(&start, NULL);
+    int i, j;
+    int sudoku[9][9]={{0, 0, 0, 0, 0, 0, 0, 9, 0},
+                      {1, 0, 0, 4, 7, 0, 6, 0, 8},
+                      {0, 5, 2, 0, 1, 9, 4, 0, 7},
+                      {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                      {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                      {0, 1, 0, 7, 5, 0, 0, 0, 9},
+                      {9, 0, 7, 3, 6, 4, 0, 8, 0},
+                      {5, 0, 6, 0, 8, 1, 0, 7, 0},
+                      {0, 8, 0, 0, 0, 0, 2, 0, 0}};
+
+    if(solveSudoku(sudoku, 0, 0))
+    {
+        printf("\n+-----+-----+-----+\n");
+        for(i=1; i<10; ++i)
+        {
+            for(j=1; j<10; ++j) printf("|%d", sudoku[i-1][j-1]);
+            printf("|\n");
+            if (i%3 == 0) printf("+-----+-----+-----+\n");
+        }
+    }
+    else printf("\n\nTIDAK ADA SOLUSI\n\n");
+
+    //  Stop timers
+    gettimeofday(&end, NULL);
+    double delta = ((end.tv_sec  - start.tv_sec) * 1000000u +
+         end.tv_usec - start.tv_usec) / 1.e6;
+    printf("\nCPU Time = %g \n",delta);
+
+   return 0;
+}
+
