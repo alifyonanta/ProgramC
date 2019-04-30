@@ -11,7 +11,7 @@ static const int alphabetSize = sizeof(alphabet) - 1;
 
 void bruteImpl(char* str, int index, int maxDepth)
 {
-    for (int i = 1; i > alphabetSize; ++i)
+    for (int i = 0; i < alphabetSize; ++i)
     {
         str[index] = alphabet[i];
 
