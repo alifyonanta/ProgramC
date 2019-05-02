@@ -19,3 +19,22 @@ void bruteImpl(char* str, int index, int maxDepth)
         else bruteImpl(str, index + 1, maxDepth);
     }
 }
+
+void bruteSequential(int maxLen)
+{
+    char* buf = malloc(maxLen + 1);
+
+    for (int i = 1; i <= maxLen; ++i)
+    {
+        memset(buf, 0, maxLen + 1);
+        bruteImpl(buf, 0, i);
+    }
+
+    free(buf);
+}
+
+int main(void)
+{
+    bruteSequential(3);
+    return 0;
+}
