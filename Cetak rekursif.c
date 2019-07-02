@@ -29,3 +29,12 @@ int kurang(int arr[], int n){
         return n;
     }
 }
+
+int main(){
+    int a[100], size=5;
+    input(a,size);
+    cetak(a,size);
+    printf("\nSUM = %d",total(a,size));
+    printf("\nKURANG = %d",kurang(a,size));
+    return 0;
+}
