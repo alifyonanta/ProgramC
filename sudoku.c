@@ -37,6 +37,8 @@ int fillsudoku(int sudoku[][9], int row, int col)
             else
                 return 1;
         }
+    return 0;
+}
         else
         {
             for(i=0; i<9; ++i)
