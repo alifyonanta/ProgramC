@@ -37,8 +37,6 @@ int fillsudoku(int sudoku[][9], int row, int col)
             else
                 return 1;
         }
-    return 0;
-}
         else
         {
             for(i=0; i<9; ++i)
@@ -86,3 +84,21 @@ int main()
                       {1, 3, 0, 0, 0, 0, 2, 5, 0},
                       {0, 0, 0, 0, 0, 0, 0, 7, 4},
                       {0, 0, 5, 2, 0, 6, 3, 0, 0}};
+
+    if( fillsudoku(sudoku, 0, 0) )
+    {
+
+        for(i=0; i<9; ++i)
+        {
+            for(j=0; j<9; ++j)
+                printf("%d ", sudoku[i][j]);
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("\n\nNO SOLUTION\n\n");
+    }
+
+    return 0;
+}
