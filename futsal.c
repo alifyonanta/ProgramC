@@ -52,5 +52,14 @@ int main(){
         scanf("%i",&sesi);
         TambahPesanan();
     }
+}
 
+void DataMembertoC(){
+    FILE *Member;
+    Member=fopen("member.txt","a+");
+    i=1;
+    while(!feof(Member)){
+        fscanf(Member,"%s %i %s",DMember[i].nama,&DMember[i].no,DMember[i].status);
+        i++;
+    }
 }
