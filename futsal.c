@@ -63,3 +63,18 @@ void DataMembertoC(){
         i++;
     }
 }
+
+int CekMember(){
+    DataMembertoC();
+    int ketemu=0;
+    int Lokasi=0;
+    for(i=1;i<=100;i++){
+        if(strcmp(DMember[i].nama,nama)==0){
+            ketemu=1;
+            Lokasi=i;
+            break;
+        }
+    }
+        i=Lokasi;
+        return ketemu;
+}
