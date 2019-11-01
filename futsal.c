@@ -78,3 +78,16 @@ int CekMember(){
         i=Lokasi;
         return ketemu;
 }
+
+void TambahMember(){
+    FILE *Member;
+    int NoMember;
+    Member=fopen("member.txt","a+");
+    DataMembertoC();
+    if(DMember[1].no==NULL){
+        NoMember=11000;
+    }else{
+        NoMember=DMember[i-2].no+1;
+    }
+    fprintf(Member,"%s %i %s\n",nama,NoMember,statusMember);
+}
