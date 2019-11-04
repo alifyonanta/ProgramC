@@ -91,3 +91,29 @@ void TambahMember(){
     }
     fprintf(Member,"%s %i %s\n",nama,NoMember,statusMember);
 }
+
+void TambahPesanan(){
+    FILE *DL1;
+    FILE *DL2;
+    DL1=fopen("Data Lapangan Vinyl.txt","a+");
+    DL2=fopen("Data Lapangan Sintesis.txt","a+");
+    if(pilihanLapangan==1){
+        if(pilihanMember==1){
+                CekMember();
+            fprintf(DL1,"%s\t%i\t%i\t%i\n",nama,sesi,135000,DMember[i].no);
+        }
+        if(pilihanMember==2){
+            fprintf(DL1,"%s\t%i\t%i\t%i\n",nama,sesi,150000,0);
+        }
+//        fprintf(DL1,"%s\t%i\t%i\t%i\n",nama,sesi,harga,member);
+    }else if(pilihanLapangan == 2){
+        if(pilihanMember==1){
+                CekMember();
+            fprintf(DL2,"%s\t%i\t%i\t%i\n",nama,sesi,90000,DMember[i].no);
+        }
+        if(pilihanMember==2){
+            fprintf(DL2,"%s\t%i\t%i\t%i\n",nama,sesi,100000,0);
+        }
+    }
+//    fprintf(Member,"%s %i %s\n",nama,NoMember,statusMember);
+}
