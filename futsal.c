@@ -117,3 +117,34 @@ void TambahPesanan(){
     }
 //    fprintf(Member,"%s %i %s\n",nama,NoMember,statusMember);
 }
+
+void cekLapangan(){
+    DataLapangan1();
+    DataLapangan2();
+
+    int ketemu1,ketemu2;
+    printf("________________________________________________________\n");
+    printf("Ketersediaan Lapangan 1 : \tKetersediaan Lapangan 2 : \n");
+    for(i=1;i<13;i++){
+        ketemu1=0;
+        ketemu2=0;
+        for(j=1;j<13;j++){
+            if(DLapangan1[j].sesi==i){
+                ketemu1=1;
+            }
+            if(DLapangan2[j].sesi==i){
+                ketemu2=1;
+            }
+        }
+        if(ketemu1==0){
+            printf("Sesi Ke-%i = Kosong \t\t",i);
+        }else{
+            printf("Sesi Ke-%i = Ada \t\t",i);
+        }
+        if(ketemu2==0){
+            printf("Sesi Ke-%i = Kosong \n",i);
+        }else{
+            printf("Sesi Ke-%i = Ada \n",i);
+        }
+    }
+}
