@@ -148,3 +148,13 @@ void cekLapangan(){
         }
     }
 }
+
+void DataLapangan1(){
+    FILE *DL1;
+    DL1=fopen("Data Lapangan Vinyl.txt","a+");
+    i=1;
+    while(!feof(DL1)){
+        fscanf(DL1,"%s %i %i %i",DLapangan1[i].nama,&DLapangan1[i].sesi,&DLapangan1[i].harga,&DLapangan1[i].member);
+        i++;
+    }
+}
