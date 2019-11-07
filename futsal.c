@@ -158,3 +158,13 @@ void DataLapangan1(){
         i++;
     }
 }
+
+void DataLapangan2(){
+    FILE *DL2;
+    DL2=fopen("Data Lapangan Sintesis.txt","a+");
+    i=1;
+    while(!feof(DL2)){
+        fscanf(DL2,"%s %i %i %i",DLapangan2[i].nama,&DLapangan2[i].sesi,&DLapangan2[i].harga,&DLapangan2[i].member);
+    i++;
+    }
+}
