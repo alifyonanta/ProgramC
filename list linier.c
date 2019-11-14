@@ -22,3 +22,10 @@ int main(){
    getch();
    return 0;
 }
+
+void alokasi(){
+   printf("Nilai :");scanf("%s",&x[100]);
+   p=(node*)malloc(sizeof(node));
+   p->data=x[100];
+   p->next==NULL;
+}
