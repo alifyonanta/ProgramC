@@ -29,3 +29,23 @@ void alokasi(){
    p->data=x[100];
    p->next==NULL;
 }
+
+void listawal(){
+   int i,N;
+   printf("masukkan banyak data awal :");scanf("%d",&N);
+   for(i=0;i<N;i++){
+      printf("masukkan nilai data ke-%d\n",i+1);
+      alokasi();
+      if(head==0){
+
+
+         head=p;
+         tail=p;
+      }
+      else{
+         tail->next=p;
+         tail=tail->next;
+      }
+   }
+   cetak();
+}
