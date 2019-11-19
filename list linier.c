@@ -49,3 +49,17 @@ void listawal(){
    }
    cetak();
 }
+
+void insertfirst(){
+   char pil;
+   printf("masukkan nilai data yang akan di insert-kan di awal\n");
+   do{
+     alokasi();
+     p->next=head;
+     head=p;
+     cetak();
+     fflush(stdin);
+     printf("inputkan data lagi ?");
+     pil=getchar();
+   }while(pil=='Y' || pil=='y');
+}
