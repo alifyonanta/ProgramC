@@ -63,3 +63,13 @@ void insertfirst(){
      pil=getchar();
    }while(pil=='Y' || pil=='y');
 }
+
+void cetak(){
+   node *baca;
+   baca=head;
+   while(baca!=NULL){
+      printf("%s\t",baca->data);
+      baca=baca->next;
+   }
+   printf("\n");
+}
